@@ -2,6 +2,10 @@ import React from 'react'
 import { Hero } from '../Components/Hero/Hero'
 import { Popular } from '../Components/Popular/Popular'
 import { Offers } from '../Components/Offers/Offers'
+import { NewCollections } from '../Components/NewCollections/NewCollections'
+import { NewsLetter } from '../Components/NewsLetter/NewsLetter'
+// import {NewCollections} from '../Components/NewCollections'
+
 
 
 export const Shop = () => {
@@ -11,6 +15,8 @@ export const Shop = () => {
         <Hero/>
         <Popular/>
         <Offers/>
+        <NewCollections/>
+        <NewsLetter/>
     </div>
   )
 }

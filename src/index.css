@@ -1,21 +1,26 @@
+/* /* Global font-family: Ensure correct fonts are applied globally */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87); /* Light text color for dark mode */
+  background-color: #242424; /* Dark background color */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*{
-  margin: 0;
+
+/* Instead of resetting margin for everything, limit it to key elements */
+body, h1, h2, p, div, section {
+  margin: 0; /* Reset default margins for key elements */
+  
 }
 
+/* Global link styles */
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,37 +30,20 @@ a:hover {
   color: #535bf2;
 }
 
+/* Adjusting the body to remove min-height */
 body {
-  font-family: 'poppins';
-  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Ensure correct font-family */
+  margin-left: 50px;
+  margin-right: 50px;
+ 
 
-  min-width: 320px;
-  min-height: 100vh;
+
+  height: auto;
+  padding-right: 30px; /* Ensure no body-level padding affects layout */
+  width: 100%; /* Ensures body takes up full width */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -68,4 +56,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Add explicit background colors to sections to avoid blending with the body */
+.offers, .popular {
+  background-color: #ffffff; /* Ensure a distinct background to avoid overlap issues */
+  /* Adjust heights if necessary to prevent overlapping */
+  height: auto;
+  padding: 20px; /* Ensure there's enough spacing between elements */
+}
+
+/* Optional: Add margin to .popular to ensure separation between sections */
+.popular {
+  margin-top: 50px; /* Ensures the .popular section doesn't overlap with previous sections */
 }
